@@ -17,9 +17,15 @@
       Repository: <a href="{{ main.person.html_url }}"> {{ main.person.html_url }} </a> <br>
       <img ng-src="{{ main.person.avatar_url }}" />
     </div>
+
   </div> 
+
+  <div ng-controller="OtherController">
+    <strong>MSG: {{ something }} </strong>
+  </div>
 
   <script src="app.js"></script>
   <script src="/controllers/main.controller.js"></script>
+  <!-- <script src="/controllers/sample.controller.js"></script> It is an example of why use IIFE pattern to avoid global variables -->
 </body>
 </html>
