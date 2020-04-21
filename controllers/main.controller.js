@@ -3,7 +3,7 @@
 
   angular
     .module('app')
-    .controller('MainController', MainController);
+    .controller('MainController', ['$http', MainController]);
 
   function MainController($http) {
 
@@ -25,11 +25,3 @@
   };  
 
 }());
-
-var app = angular.module('app');
-
-app.controller('OtherController', OtherController);
-
-function OtherController($scope) {
-  $scope.something = 'Hi there, I live in main.controller.js file :)';
-}
