@@ -5,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AngularJS 1.7</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  
 </head>
-<body ng-app>
-  <h1>AngularJS {{ 3 + 4 }}</h1>
+<body ng-app="app">
+  <div ng-controller="MainController as main">
+    <h1>{{ main.message }}</h1>
+    <span style="color: red;">{{ main.error }}</span>
+    
+    <div>
+      User: {{ main.person.login }} <br>
+      Repository: <a href="{{ main.person.html_url }}"> {{ main.person.html_url }} </a> <br>
+      <img ng-src="{{ main.person.avatar_url }}" />
+    </div>
+  </div> 
+
   <script src="app.js"></script>
+  <script src="/controllers/main.controller.js"></script>
 </body>
 </html>
